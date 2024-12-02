@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;500&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .top-taskbar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-taskbar h1 {
+            margin: 0;
+        }
+
+        .welcome {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .welcome h2,
+        .welcome p {
+            margin: 0;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            max-width: 300px;
+            padding: 16px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password], input[type=email], input[type=tel], textarea {
+            width: calc(100% - 20px); /* Adjust to full width minus padding */
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .contact-form {
+            display: flex;
+            padding: 20px;
+            text-align: left;
+            background-color: #fff;
+            color: black;
+        }
+
+        .map-container {
+            flex: 1;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 550px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .about-hospital-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hospital-photo {
+            flex: 2;
+        }
+
+        .hospital-photo img {
+            width: 100%;
+            height: 600px; /* Increase the height of the photo */
+            object-fit: cover; /* Ensure the image covers the entire area */
+        }
+
+        .hospital-description {
+            flex: 1;
+            padding-left: 20px;
+            font-family: 'Roboto', sans-serif; /* Change font */
+            color: #333; /* Darker color for readability */
+        }
+
+        .hospital-description h2 {
+            font-size: 24px; /* Larger font size for heading */
+            font-weight: 700; /* Bold font weight */
+            margin-bottom: 15px;
+        }
+
+        .hospital-description p {
+            font-size: 18px; /* Larger font size for description */
+            font-weight: 300; /* Lighter font weight */
+            line-height: 1.6; /* Increased line height for better readability */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HealSys</title>
+</head>
+<body>
+
+    <div class="top-taskbar">
+        <div class="welcome">
+            <h2>Welcome to HealSys</h2>
+            <p>"Your Health, Our Priority"</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <div class="logo">
+            <!-- <img src="" alt="HealSys Logo"> -->
+            <center> <h1>
+                <b>H</b>
+                <b>e</b>
+                <b>a</b>
+                <b>l</b>
+                <b>S</b>
+                <b>y</b>
+                <b>s</b>
+            </h1>
+            </center>
+        </div>
+    </header>
+
+   
+        <div class="about-hospital-wrapper">
+            <div class="hospital-photo">
+                <img src="home.jpg" alt="Hospital Photo">
+            </div>
+            <div class="hospital-description">
+                <h2>About Our Hospital</h2>
+                <p>Welcome to HealSys, where your health is our priority. Our hospital is equipped with state-of-the-art facilities and a dedicated team of professionals to provide the highest quality of care. We offer a wide range of services to meet the healthcare needs of our community. Our mission is to ensure that every patient receives compassionate, personalized, and effective treatment. Join us in our commitment to better health and well-being.</p>
+            </div>
+        </div>
+  
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-wrapper">
+            <div class="service" id="patient-registration">
+                <a href="patient_r.php">
+                <img src="register - Copy.jpg" alt="Patient Registration">
+                <p>Patient Registration</p>
+                </a>
+            </div>
+            <div class="service" id="appointment-scheduling">
+                <a href="appoint.html">
+                <img src="appoin.jpg" alt="Appointment Scheduling">
+                <p>Appointment Scheduling</p>
+                </a>
+            </div>
+            <div class="service" id="report-analysis">
+                <a href="pat_pres.php">
+                <img src="report.jpg" alt="Report and Analysis">
+                <p>Report and Analysis</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+   
+    <section id="contact">
+        <h2><center>Get In Touch</center></h2>
+        <div class="contact-form">
+            <div style="flex: 1;">
+                <form action="/contact_action.php" method="post" class="cont">
+                    <table>
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" name="name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Phone:</label></td>
+                            <td><input type="tel" id="phone" name="phone" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="subject">Subject:</label></td>
+                            <td><input type="text" id="subject" name="subject" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="message">Message:</label></td>
+                            <td><textarea id="message" name="message" rows="4" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit" class="btn">Send Message</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div class="map-container">
+                <!-- Update the following Google Maps embed code with accurate coordinates -->
+                <iframe class="map-iframe" src="https://www.google.com/maps/embed?&q=your_latitude,your_longitude&z=15.429955,-75.016388" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function submitPatientRegistration() {
+            // Handle patient registration logic
+            alert('Patient Registration Form Submitted');
+        }
+
+        document.getElementById('patient-registration').addEventListener('click', function () {
+            document.getElementById('patient-registration-form').style.display = 'block';
+        });
+    </script>
+
+    <footer class="footer">
+        <center>
+        <p>SDM College of Engineering & Technology, Dhavalgiri, 580002, Dharwad.</p>
+        <p>Phone : 9686077148</p>
+        <p>Email : healsys21@gmail.com</p>
+        <p>&copy; 2023 HealSys. All rights reserved.</p>
+        </center>
+    </footer>
+
+</body>
+</html>

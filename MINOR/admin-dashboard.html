@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .top-taskbar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-taskbar h1 {
+            margin: 0;
+        }
+
+        .welcome {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .welcome h2,
+        .welcome p {
+            margin: 0;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .dashboard-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            padding: 20px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .dashboard-card h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .dashboard-card p {
+            color: lightgreen;
+        }
+
+        .footer {
+            background-color: #4CAF50;
+            padding: 15px;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .styled-table thead th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .styled-table tbody td {
+            padding: 12px;
+        }
+
+        .styled-table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-taskbar">
+        <div class="welcome">
+            <h2>Welcome to HealSys</h2>
+            <p>"Your Health, Our Priority"</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Logout</a></li>  
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <div class="logo">
+           
+            <center>
+                <h1>
+                    <b>H</b>
+                    <b>e</b>
+                    <b>a</b>
+                    <b>l</b>
+                    <b>S</b>
+                    <b>y</b>
+                    <b>s</b>
+                </h1>
+            </center>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-card">
+            <h2>Patients list</h2>
+            <a href="patient_list.php" class="dashboard-link">
+                <p>View Patients</p>
+            </a>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Doctor list</h2>
+            <a href="doc_list.php" class="dashboard-link">
+                <p>View Doctors</p>
+            </a>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Appointment Details</h2>
+            <a href="appoint_list.php" class="dashboard-link">
+                <p>View Appointments</p>
+            </a>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Prescription List</h2>
+            <a href="prescription_list.php" class="dashboard-link">
+                <p>View Prescriptions</p>
+            </a>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Manage Doctors</h2>
+            <a href="doctor_r.php" class="dashboard-link">
+                <p>Add Doctor</p>
+            </a>
+            <a href="doc_del.php" class="dashboard-link">
+                <p>Delete Doctor</p>
+            </a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

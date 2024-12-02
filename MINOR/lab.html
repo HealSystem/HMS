@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('lab.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin-top: 20%;
+            opacity: 0.8;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0c0c0c;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 0px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        div {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #0e0d0d;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select,
+        input[type="submit"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+            width:300px
+        }
+
+        .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+
+<section class="form-container">
+    <form>
+        <h2>Laboratory</h2>
+
+        <table>
+            <tr>
+                <td><label for="patientName">Patient's Name:</label></td>
+                <td><input type="text" id="patientName" name="patientName" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="patientID">Patient ID:</label></td>
+                <td><input type="text" id="patientID" name="patientID" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="phoneNumber">Phone Number:</label></td>
+                <td><input type="tel" id="phoneNumber" name="phoneNumber" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="scansDate">Date of Scans Conducted:</label></td>
+                <td><input type="date" id="scansDate" name="scansDate" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="testsDate">Date of Tests Conducted:</label></td>
+                <td><input type="date" id="testsDate" name="testsDate" required></td>
+            </tr>
+
+            <table><tr class="checkbox-group">
+                <td>
+                    <label>Scan Types:</label>&nbsp; &nbsp;
+                    <input type="checkbox" name="c">X-ray&nbsp;&nbsp;
+                    <input type="checkbox" name="h">MRI Scan&nbsp;&nbsp; 
+                    <input type="checkbox" name="e">CT scan&nbsp;&nbsp;
+                    <input type="checkbox" name="k">PET scan &nbsp;&nbsp;  
+                   
+                </td>
+            </tr></table>
+
+         <table><tr class="checkbox-group">
+                <td>
+                    <label>Test Types:</label>&nbsp; &nbsp;
+                    <input type="checkbox" name="c">Blood Test &nbsp;&nbsp;
+                    <input type="checkbox" name="h">urine Test &nbsp;&nbsp;
+                    <input type="checkbox" name="e">BloodCountTest<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="k"> MultiCancerTest    
+                </td>
+            </tr></table>
+
+          <table>  <tr>
+                <td><label for="testConductor">Test Conducted by:</label></td>
+                <td><input type="text" id="testConductor" name="testConductor" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="labReport">Laboratory Report:</label></td>
+                <td><textarea id="labReport" name="labReport" rows="5"></textarea></td>
+            </tr>
+        </table>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>
+
+</body>
+</html>
